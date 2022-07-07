@@ -1,0 +1,73 @@
+.main-container {
+  display: flex;
+  gap: 10px;
+  width: 1440px;
+  position: absolute;
+  left: -130px;
+
+  #slider {
+    padding-right: 10px;
+    height: 410px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -130px;
+
+    .top-row {
+      margin-bottom: 10px;
+      left: -120px;
+    }
+
+    .bottom-row-container {
+      max-width: 100%;
+      left: -130px;
+
+      .bottom-row {
+        @include hidden;
+        max-width: max-content;
+        left: -130px;
+      }
+    }
+  }
+
+  .images {
+    position: $rel;
+
+    img {
+      height: 200px;
+      width: auto;
+      border-radius: 5px;
+      position: $rel;
+      margin: 0 5px;
+    }
+  }
+
+  .arrow {
+    flex-direction: column;
+    display: flex;
+    row-gap: 10px;
+    position: $rel;
+
+    button {
+      border: solid 1px black;
+      padding: 29px 29px;
+      border-radius: 5px;
+    }
+  }
+}
+
+#next {
+  @include image;
+  background-image: url("/imgs/arrow-gray-right.png");
+  &:hover {
+    background-image: url("/imgs/arrow-blue-right.png");
+  }
+}
+#prev {
+  @include image;
+  background-image: url("/imgs/arrow-gray-left.png");
+  &:hover {
+    background-image: url("/imgs/arrow-blue-left.png");
+  }
+}

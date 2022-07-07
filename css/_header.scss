@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  gap: 19px;
+  margin-bottom: 60px;
+
+  #gray-box1 {
+    background: $gray;
+    border-radius: 0px 0px 5px 5px;
+    height: $box-height;
+    width: 301px;
+  }
+
+  #gray-box2 {
+    @include grayBox;
+    width: 621px;
+    background: $box-height;
+    border-radius: 0px 0px 5px 5px;
+    height: 100px;
+    p {
+      @include boxText;
+    }
+  }
+}

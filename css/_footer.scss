@@ -1,0 +1,15 @@
+.footer {
+  bottom: 0;
+  position: absolute;
+
+  .footer-box {
+    @include grayBox;
+    border-radius: 5px 5px 0px 0px;
+    height: $box-height;
+    width: 941px;
+    background-color: $gray;
+    p {
+      @include boxText;
+    }
+  }
+}

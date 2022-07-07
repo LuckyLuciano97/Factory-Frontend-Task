@@ -4,52 +4,82 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Frontend Slider Task</title>
   </head>
   <body>
-    <div class="main-container">
+    <div class="wrapper">
       <div class="nav">
-        <div id="first-grey-box"></div>
-        <div id="second-grey-box">
+        <div id="gray-box1"></div>
+        <div id="gray-box2">
           <p>Skup drugih elemenata na stranici</p>
         </div>
       </div>
-      <div class="second-container">
-          <div id="slider">
-        <div id="first-pics">
-          <div class="images"><img src="imgs/slider-image-1.jpg" alt=""></div>
-          <div class="images"><img src="imgs/slider-image-2.jpg" alt=""></div>
-          <div class="images"><img src="imgs/slider-image-3.jpg" alt=""></div>
-          <div class="images"><img src="imgs/slider-image-4.jpg" alt=""></div>
-          <div class="images"><img src="imgs/slider-image-5.jpg" alt=""></div>
-        </div>
-        <div id="second-pics">
-            <div class="images"><img src="imgs/slider-image-6.jpg" alt=""></div>
-            <div class="images"><img src="imgs/slider-image-7.jpg" alt=""></div>
-            <div class="images"><img src="imgs/slider-image-8.jpg" alt=""></div>
-            <div class="images"><img src="imgs/slider-image-9.jpg" alt=""></div>
-          
-            <div id="arrow-container">
-            <div class="arrow">
-                <img id="next" src="imgs/arrow-blue-right.png" alt="">
-                <img id="prev" src="imgs/arrow-gray-left.png" alt="">
+      <div class="main-container">
+        <div id="slider">
+          <div class="top-row">
+            <div class="images">
+              <img src="imgs/slider-image-7.jpg" alt="" />
             </div>
+            <div class="images">
+              <img src="imgs/slider-image-6.jpg" alt="" />
+            </div>
+            <div class="images">
+              <img src="imgs/slider-image-9.jpg" alt="" />
+            </div>
+            <div class="images">
+              <img src="imgs/slider-image-8.jpg" alt="" />
+            </div>
+            <div class="images">
+              <img src="imgs/slider-image-5.jpg" alt="" />
+            </div>
+            <div class="images">
+              <img src="imgs/slider-image-6.jpg" alt="" />
+            </div>
+          </div>
+          <div class="bottom-row-container">
+            <div class="bottom-row">
+              <div class="images">
+                <img src="imgs/slider-image-4.jpg" alt="" />
+              </div>
+              <div class="images">
+                <img src="imgs/slider-image-1.jpg" alt="" />
+              </div>
+              <div class="images">
+                <img src="imgs/slider-image-2.jpg" alt="" />
+              </div>
+              <div class="images">
+                <img src="imgs/slider-image-3.jpg" alt="" />
+              </div>
+              <div class="images">
+                <img src="imgs/slider-image-5.jpg" alt="" />
+              </div>
+            </div>
+            <div class="arrow-container">
+              <div class="arrow">
+                <button id="prev"></button>
+                <button id="next"></button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-        <div id="text">
-            <h1>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h1>
-            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+        <div class="text">
+          <h1>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h1>
+          <p>
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
+            autem vel eum iriure dolor in hendrerit in vulputate velit esse
+            molestie consequat.
+          </p>
         </div>
       </div>
       <div class="footer">
-        <div id="third-grey-box">
+        <div class="footer-box">
           <p>Skup drugih elemenata na stranici</p>
         </div>
       </div>
     </div>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

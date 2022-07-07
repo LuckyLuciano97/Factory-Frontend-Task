@@ -1,26 +1,3 @@
-$(document).ready(function(){
-    $('#next').click(function(){
-        //Making first image in the div dissapear
-        var firstImage = $('#first-pics .images').first().css({"display":"none"})
-        var firstImage2 = $('#second-pics .images').first().css({"display":"none"})
-        //Putting the first image to the end of the div
-        $('#first-pics').append(firstImage)
-        $('#second-pics').append(firstImage2)
-        //Displaying the image again using fadeIn method
-        $('#first-pics .images').last().fadeIn('slow')
-        $('#second-pics .images').last().fadeIn('slow')
-    })
+"use strict";
 
-    $('#prev').click(function(){
-        //Making last image in the div dissapear
-        var lastImage = $('#first-pics .images').last().css({"display":"none"})
-        var lastImage2 = $('#second-pics .images').last().css({"display":"none"})
-        //Putting the last image to the front of the div
-        $('#first-pics').prepend(lastImage)
-        $('#second-pics').prepend(lastImage2)
-        //Displaying the image again using fadeIn method
-        $('#first-pics .images').first().fadeIn('slow')
-        $('#second-pics .images').first().fadeIn('slow')
-        })
-    })
-
+$(document).ready(function(){let a=0,b=0,c=0,d=0;$("#next").on("click",function(){a=$(".top-row .images").first().outerWidth(),b=$(".bottom-row .images").first().outerWidth();var c=$(".top-row .images:first"),d=$(".bottom-row-container .bottom-row .images").first();$("#next").attr("disabled","disabled"),setTimeout(function(){$("#next").removeAttr("disabled")},1e3),$("#prev").attr("disabled","disabled"),setTimeout(function(){$("#prev").removeAttr("disabled")},1e3),$(".top-row .images").animate({left:"-="+a},"fast"),$(".top-row .images:first").fadeOut("fast",function(){$(".top-row .images").css({left:"0"}),$(".top-row").append(c),$(".top-row .images").last().fadeIn()}),$(".bottom-row-container .bottom-row .images").animate({left:"-="+b},"fast"),$(".bottom-row-container .bottom-row .images").first().fadeOut("fast",function(){$(".bottom-row-container .bottom-row .images").css({left:"0"}),$(".bottom-row").append(d),$(".bottom-row .images").last().fadeIn()})}),$("#prev").on("click",function(){c=$(".top-row .images").last().width(),d=$(".bottom-row-container .bottom-row .images").last().width();var a=$(".top-row .images").last(),b=$(".bottom-row-container .bottom-row .images").last(),e=$(a).clone(),f=$(b).clone();$("#next").attr("disabled","disabled"),setTimeout(function(){$("#next").removeAttr("disabled")},1e3),$("#prev").attr("disabled","disabled"),setTimeout(function(){$("#prev").removeAttr("disabled")},1e3),$(".top-row .images").animate({left:"+="+c},function(){$(e).insertBefore($(".top-row .images:first")),$(".top-row .images").css({left:"0"}),$(a).remove()}),$(".bottom-row-container .bottom-row .images").animate({left:"+="+d},function(){$(f).insertBefore($(".bottom-row .images:first")),$(".bottom-row-container .bottom-row .images").css({left:"0"}),$(b).remove()})})})
